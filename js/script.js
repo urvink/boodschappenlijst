@@ -6,7 +6,7 @@ $(document).on('click','#dec_qty',()=>{
     }    
 });
 
-$(document).on('click', '#inc_qty', () => {
+$(document).on('click', '#inc_qty', ()=>{
     let qty = $('#qty').val();
     if (qty <= 98) {
         qty++;
@@ -15,4 +15,6 @@ $(document).on('click', '#inc_qty', () => {
     
 });
 
-$('#totalAmount')
+$(document).on('click', '#addItem', ()=>{
+    alert("HEY u");
+});
