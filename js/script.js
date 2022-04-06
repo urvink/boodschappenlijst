@@ -35,7 +35,17 @@ $(document).on('click', '#addItem', ()=>{
  */
 //Mark completed
 $(document).on('click','.completed-btn',()=>{
-    alert('COMPLETED');
+    let itemId = $(this).attr('data-itemid');
+    alert(itemId);
+
+    if ($('#item'+itemId+'.item').hasClass('text-decoration-line-through')){
+        $('#item'+itemId+' .item').removeClass('text-decoration-line-through').removeClass('text-muted');
+        $(this).removeClass('btn-secondary').addClass('btn-success');
+    }else{
+        $('#item'+itemId+' .item').addClass('text-decoration-line-through').addClass('text-muted');
+        $(this).removeClass('btn-success').addClass('btn-secondary');
+    }
+    
 });
 
 //Remove item
