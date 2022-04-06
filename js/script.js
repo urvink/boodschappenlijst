@@ -30,6 +30,21 @@ $(document).on('click', '#addItem', ()=>{
 
 });
 
+/**
+ * ITEM Actions
+ */
+//Mark completed
+$(document).on('click','.completed-btn',()=>{
+    alert('COMPLETED');
+});
+
+//Remove item
+$(document).on('click','.remove-btn',()=>{
+    alert('REMOVE');
+});
+
+//Functions
+
 function calcTotal(newSubTotal) {
     let total = $('#totalAmount').val();
 
