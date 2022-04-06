@@ -13,12 +13,13 @@
             integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/solid.min.js"
-            integrity="sha512-+KCv9G3MmyWnFnFrd2+/ccSx5ejo1yED85HZOvNDhtyHu2tuLL8df5BtaLXqsiF68wGLgxxMb4yL5oUyXjqSgw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
     <body>
+        
         <div class="container card">
             <header class="card-header">
                 <h2 class="text-center">Grocery list app</h2>
@@ -64,25 +65,58 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <button id="addItem" class="btn btn-primary">Add 2 list <i class="fas fa-plus"></i></button>
-                        <i class="fas fa-address-book"></i>
-                        <i class="fa-solid fa-360-degrees"></i>
+                        <button id="addItem" class="btn btn-primary">Add <i class="fas fa-plus"></i></button>
                         <!-- <button class="btn btn-danger">Remove<i class="fas fa-plus"></i></button> -->
                     </div>
                 </div>
                 <div class="row">
                     <div class="card mt-4">
-                        <div class="card-header">
-                            <div class="card-title">
-                                <h3 class="text-center">List <i class="fa-solid fa-cart-plus"></i></h3>
-                            </div>
-                        </div>
                         <div class="card-body">
-                            <div id="groceryList">
+                            <h3 class="text-center">Groceries</h3>
+                            <hr>
+                            <div id="groceries">
+                                <ul id="groceryList list-group">
+                                    <li class="groceryItem list-group-item row">
+                                        <div class="item">
+                                            <div class="qty">1</div>
+                                            <div class="product">banana</div>
+                                            <div class="price">2,50</div>
+                                            <div class="store">LIDL</div>
+                                        </div>
+                                        <div class="actions btn-group">
+                                            <button class="btn btn-success completed-btn"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-danger remove-btn"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="groceryItem list-group-item">
+                                        <div class="item row">
+                                            <div class="qty col-1">1</div>
+                                            <div class="product col-3">banana</div>
+                                            <div class="price col-3">&euro; 2<sup>50</sup></div>
+                                            <div class="store col-3">LIDL</div>
+                                        </div>
+                                        <div class="actions btn-group">
+                                            <button class="btn btn-success completed-btn"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-danger remove-btn"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </li>
+                                    <li class="groceryItem list-group-item row">
+                                        <div class="item col-8 border d-inline-block">
+                                            <span class="qty">1</span>
+                                            <span class="product">banana</span>
+                                            <span class="price">2,50</span>
+                                            <span class="store">LIDL</span>
+                                        </div>
+                                        <div class="actions btn-group col-1 border">
+                                            <button class="btn btn-success completed-btn"><i class="fas fa-check"></i></button>
+                                            <button class="btn btn-danger remove-btn"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <p class="text-end">Total <span id="totalAmount" class="fst-italic"></span></p>
+                            <p class="text-end">Total <span id="totalAmount" class="fst-italic">0,00</span></p>
                         </div>
                     </div>
                 </div>
