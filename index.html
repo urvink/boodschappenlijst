@@ -19,10 +19,21 @@
     </head>
 
     <body>
-        
         <div class="container card">
             <header class="card-header">
                 <h2 class="text-center">Grocery list app</h2>
+                <div class="theme-toggle">
+                    <div class="form-check">
+                        <label class="form-check-label" for="theme-toggle">Light</label>
+                        <input class="form-check-input" type="radio" name="theme-toggle" id="light-theme" checked>
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label" for="theme-toggle">Dark</label>
+                        <input class="form-check-input" type="radio" name="theme-toggle" id="dark-theme">
+                    </div>
+
+                </div>
             </header>
 
             <main class="container card-body">
@@ -76,7 +87,7 @@
                             <hr>
                             <div id="groceries">
                                 <ul id="groceryList list-group">
-                                    <li id="item1" class="groceryItem list-group-item row">
+                                    <li id="item1" class="groceryItem list-group-item row" data-itemid="1">
                                         <div class="item col-11 row">
                                             <div class="qty col-1">1</div>
                                             <div class="product col-3">banana</div>
@@ -85,8 +96,10 @@
                                             <div class="subTotal col-2">65</div>
                                         </div>
                                         <div class="actions btn-group col-1">
-                                            <button class="btn btn-success completed-btn" data-itemid="1"><i class="fas fa-check"></i></button>
-                                            <button class="btn btn-danger remove-btn"><i class="fas fa-trash"></i></button>
+                                            <button class="btn btn-success completed-btn" data-itemid="1"><i
+                                                    class="fas fa-check"></i></button>
+                                            <button class="btn btn-danger remove-btn" data-itemid="1"><i
+                                                    class="fas fa-trash"></i></button>
                                         </div>
                                     </li>
                                     <li id="item2" class="groceryItem list-group-item row">
@@ -97,9 +110,11 @@
                                             <div class="store col-3">LIDL</div>
                                             <div class="subTotal col-2">65</div>
                                         </div>
-                                        <div class="actions btn-group col-1">
-                                            <button class="btn btn-success completed-btn" data-itemid="2"><i class="fas fa-check"></i></button>
-                                            <button class="btn btn-danger remove-btn"><i class="fas fa-trash"></i></button>
+                                        <div class="actions btn-group col-1" >
+                                            <button class="btn btn-success completed-btn" data-itemid="2"><i
+                                                    class="fas fa-check"></i></button>
+                                            <button class="btn btn-danger remove-btn" data-itemid="2"><i
+                                                    class="fas fa-trash"></i></button>
                                         </div>
                                     </li>
                                 </ul>
