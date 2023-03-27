@@ -34,9 +34,10 @@ $(document).on('click', '#addItem', ()=>{
  * ITEM Actions
  */
 //Mark completed
-$(document).on('click','.completed-btn',()=>{
-    let itemId = $(this).attr('data-itemid');
-    alert(itemId);
+$(document).on('click','.actions .completed-btn',()=>{
+    // let itemId = $(this).parent('.completed-btn').parent('.actions').parent('.groceryItem').attr('data-itemid');
+    let id = $(this).attr("data-itemid");
+    alert(id);
 
     if ($('#item'+itemId+'.item').hasClass('text-decoration-line-through')){
         $('#item'+itemId+' .item').removeClass('text-decoration-line-through').removeClass('text-muted');
@@ -49,12 +50,12 @@ $(document).on('click','.completed-btn',()=>{
 });
 
 //Remove item
-$(document).on('click','.remove-btn',()=>{
-    alert('REMOVE');
+$(document).on('click', '.actions .remove-btn',()=>{
+    let id = $(this).attr("data-itemid");
+    alert($(this).attr("data-itemid"));
 });
 
 //Functions
-
 function calcTotal(newSubTotal) {
     let total = $('#totalAmount').val();
 
@@ -65,6 +66,6 @@ function calcTotal(newSubTotal) {
 
 function checkInputs() {
     if (condition) {
-        name
+        //
     }
 }
